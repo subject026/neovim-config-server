@@ -18,6 +18,13 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'eandrju/cellular-automaton.nvim'
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  
+  use ({
+    "olimorris/onedarkpro.nvim",
+    config = function() 
+	    vim.cmd("colorscheme onedark")
+    end
+    })
 
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
